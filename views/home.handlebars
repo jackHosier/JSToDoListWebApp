@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>ToDo Home Page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    
+</head>
+<body>
+    <h1>WELCOME TO TODO!</h1>
+    <br/>
+    <h2>The best online to-do list application of 2005!</h2>
+    <h4>because it's the only one</h4>
+    <br/>
+
+    <!-- This is if the user is logged in, load all the tasks here -->
+    {{#if user}}
+        <h1>Welcome {{username}}</h1> <!-- Print out the username here --> 
+        <form action="/add_task" method="POST">
+            <label>Add a task here: </label>
+            <input type="text" name="task" placeholder="task desc. here">
+            <input type="submit">
+        </form>
+        <br/>
+        <h2>Tasks: </h2>
+        <ol> <!-- THIS IS THE TASK LIST -->
+        {{#tasks}}
+            <li>{{task_id}} {{task_desc}} {{is_complete}}</li>
+        {{/tasks}}
+        </ol>
+
+    {{/if}}
+    
+   <a href='/logout'>logout</a> <!--Link to register page-->
+</body>
+</html>

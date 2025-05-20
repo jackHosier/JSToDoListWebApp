@@ -1,0 +1,38 @@
+body {
+    background-color: lightseagreen;
+}
+
+form{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: blue;
+  border: 2px solid black;
+  padding: 10px;   
+  background-color: aqua; 
+}
+
+h1 {
+  color: maroon;
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h2 {
+  color: maroon;
+  text-align: left;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+p {
+  font-family: verdana;
+  font-size: 20px;
+}
+
+/* This is for the error box that will appear at the top of the screen when 
+something goes wrong.*/
+
+.errorBox{
+  background: #CC0000;
+  color: white;
+}
